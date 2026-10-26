@@ -1,0 +1,16 @@
+# SQLite 資料庫
+*.db
+*.sqlite
+*.sqlite3
+
+# Python 暫存檔案
+__pycache__/
+*.py[cod]
+
+# 環境設定與機密資料
+.env
+.env.*
+
+# 個人資料與備份
+backups/
+*.bak
