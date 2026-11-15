@@ -1,11 +1,13 @@
 
 import sqlite3
+from pathlib import Path
 
-DB_PATH = "/content/stock_manager.db"
+# 使用目前專案資料夾作為資料庫位置
+DB_PATH = Path(__file__).resolve().parent / "stock_manager.db"
 
 
 def get_connection():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
 
